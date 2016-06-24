@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scratch Dash</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<table id="projectsTable">
+		<thead>
+			<tr>
+				<th data-sort="float" data-sort-default="desc">Shared</th>
+				<th data-sort="string">Title</th>
+				<th data-sort="int" data-sort-default="desc">Loves</th>
+				<th data-sort="int" data-sort-default="desc">Favorites</th>
+				<th data-sort="int" data-sort-default="desc">Views</th>
+				<th data-sort="int" data-sort-default="desc">Comments</th>
+			</tr>
+		</thead>
+		<tbody id="projectsTableBody"></tbody>
+		<tfoot id="projectsTableFooter"></tfoot>
+	</table>
+	<div class="input-group centered" id="user-input-wrapper">
+		<input type="text" class="styled-text group-left" placeholder="Enter a username...">
+		<a href="#" class="button group-right">Find User</a>
+	</div>
+	<div id="errorMessage">There was an error. Either the username you entered is incorrect, or <a href="http://crossorigin.me/">crossorigin.me</a> is down.</div>
+
+	<script src="jquery.min.js"></script>
+	<script src="stupidtable.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
