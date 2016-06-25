@@ -194,3 +194,25 @@ th.sorting-asc, th.sorting-desc {
 #errorMessage a {
   color:inherit;
 }
+
+#loader_img {
+  display:none;
+  width:36px;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform-origin: 48.4% 56.9%;
+  animation:spin 3s infinite linear;
+}
+#loader_img.showing {
+  display:block;
+}
+
+@keyframes spin {
+  0% {
+    transform:translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform:translate(-50%,-50%) rotate(360deg);
+  }
+}
