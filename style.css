@@ -29,6 +29,7 @@ body {
 }
 #projectsTable td, #projectsTable th {
   padding:10px;
+  padding-left:22px;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
@@ -57,7 +58,7 @@ body {
   border:4px solid transparent;
   border-top-color:black;
   position:absolute;
-  right:4px;
+  left:8px;
   top:22px;
 }
 #projectsTable th:after {
@@ -68,7 +69,7 @@ body {
   border:4px solid transparent;
   border-bottom-color:black;
   position:absolute;
-  right:4px;
+  left:8px;
   bottom:22px;
 }
 #projectsTable th.sorting-asc:after {
@@ -76,6 +77,17 @@ body {
 }
 #projectsTable th.sorting-desc:before {
 	display:none;
+}
+th.sorting-asc, th.sorting-desc {
+    color: #1976D2;
+}
+
+#projectsTable th.sorting-asc:before {
+    border-top-color: #1976D2;
+}
+
+#projectsTable th.sorting-desc:after {
+    border-bottom-color: #1976D2;
 }
 #projectsTableFooter {
   font-weight:bold;
@@ -95,9 +107,6 @@ body {
   box-sizing:border-box;
   padding:calc((42px - 27px) / 2);
 }
-
-
-
 
 .button {
   padding:4px 14px;
