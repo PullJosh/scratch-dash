@@ -10,6 +10,7 @@ function getProjects(username, offset, callback) {
 	.fail(function(){
 		console.log("error bros");
 		$("#errorMessage").addClass("showing");
+		$("#loader_img").removeClass("showing");
 		window.setTimeout(function(){
 			$("#errorMessage").removeClass("showing")
 		}, 10000);
@@ -108,6 +109,7 @@ $(window).resize(resizeHeadFoot);
 
 
 function searchUser(username) {
+	$("#loader_img").addClass("showing");
 	getAllData(username, function(projects, totals) {
 		$("#projectsTableBody").html(generateTBody(projects));
 		$("#projectsTableFooter").html(generateTotalsHTML(totals));
@@ -116,6 +118,7 @@ function searchUser(username) {
 		var table = $("#projectsTable");
 		table.stupidtable().find("thead th").eq(0).stupidsort();
 		resizeHeadFoot();
+		$("#loader_img").removeClass("showing");
 	});
 }
 
