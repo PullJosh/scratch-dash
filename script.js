@@ -3,7 +3,7 @@
 function getProjects(username, offset, callback) {
 	$.ajax({
 		url: "https://crossorigin.me/https://api.scratch.mit.edu/users/" + username + "/projects?offset=" + 20 * offset,
-		crossDomain: false,
+		crossDomain: true,
 		context: document.body
 	})
 	.done(callback)
